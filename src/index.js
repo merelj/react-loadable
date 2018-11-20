@@ -230,7 +230,7 @@ function createLoadableComponent(loadFn, options) {
     };
 
     render() {
-      if (this.state.loading || this.state.error || this.props.showLoading) {
+      if (this.props.showLoading || this.state.loading || this.state.error) {
         return React.createElement(opts.loading, {
           isLoading: this.state.loading,
           pastDelay: this.state.pastDelay,
